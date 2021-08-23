@@ -1,0 +1,78 @@
+{
+    "/insertrequest": {
+        "post": {
+            "x-mojo-to": "Com::PTFSEurope::RapidILL::Api#InsertRequest",
+            "operationId": "ApiInsertRequestRapidILL",
+            "tags": ["rapidill", "insertrequest"],
+            "parameters": [
+                {
+                    "name": "payload",
+                    "in": "body",
+                    "description": "The request payload",
+                    "required": true,
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "borrowerId": {
+                                "description": "The ID of the borrower making the request",
+                                "type": "string"
+                            },
+                            "metadata": {
+                                "description": "The metadata describing the requested material",
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            ],
+            "produces": [
+                "application/json"
+            ],
+            "responses": {
+                "200": {
+                    "description": "The result of the InsertRequest call to the RapidILL API"
+                }
+            }
+        }
+    },
+    "/updaterequest": {
+        "post": {
+            "x-mojo-to": "Com::PTFSEurope::RapidILL::Api#UpdateRequest",
+            "operationId": "ApiUpdateRequestRapidILL",
+            "tags": ["rapidill", "updaterequest"],
+            "parameters": [
+                {
+                    "name": "payload",
+                    "in": "body",
+                    "description": "The request payload",
+                    "required": true,
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "requestId": {
+                                "description": "The ID of the request being updated",
+                                "type": "string"
+                            },
+                            "updateAction": {
+                                "description": "The update action being performed on the request",
+                                "type": "string"
+                            },
+                            "metadata": {
+                                "description": "The metadata describing the requested material",
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            ],
+            "produces": [
+                "application/json"
+            ],
+            "responses": {
+                "200": {
+                    "description": "The result of the UpdateRequest call to the RapidILL API"
+                }
+            }
+        }
+    }
+}
