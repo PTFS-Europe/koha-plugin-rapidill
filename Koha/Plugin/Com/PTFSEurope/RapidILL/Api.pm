@@ -75,7 +75,6 @@ sub UpdateRequest {
         input => {
             RapidRequestId       => $body->{requestId},
             UpdateAction         => $body->{updateAction},
-            ClientAppName        => "Koha RapidILL client",
             %{$credentials},
             %{$metadata}
         }
