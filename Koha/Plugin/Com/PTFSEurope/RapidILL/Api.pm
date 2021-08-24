@@ -28,6 +28,8 @@ sub InsertRequest {
 
     my $borrower = Koha::Patrons->find( $body->{borrowerId} );
 
+    my $metadata = $body->{metadata} //= {};
+
     # Base request including passed metadata and credentials
     my $req = {
         input => {
@@ -38,7 +40,7 @@ sub InsertRequest {
             IsHoldingsCheckOnly  => 0,
             DoBlockLocalOnly     => 0,
             %{$credentials},
-            %{$body->{metadata}}
+            %{$metadata}
         }
     };
 
@@ -66,6 +68,8 @@ sub UpdateRequest {
 
     my $body = $c->validation->param('body');
 
+    my $metadata = $body->{metadata} //= {};
+
     # Base request including passed metadata and credentials
     my $req = {
         input => {
@@ -73,7 +77,7 @@ sub UpdateRequest {
             UpdateAction         => $body->{updateAction},
             ClientAppName        => "Koha RapidILL client",
             %{$credentials},
-            %{$body->{metadata}}
+            %{$metadata}
         }
     };
 
