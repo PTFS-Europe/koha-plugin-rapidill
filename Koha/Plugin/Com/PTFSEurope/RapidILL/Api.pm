@@ -24,17 +24,7 @@ sub InsertRequest {
 
     my $credentials = _get_credentials();
 
-    my $body = $c->validation->param('payload')->{body};
-
-    if (!$body->{borrowerId} || !$body->{metadata}) {
-        return $c->render(
-            status => 400,
-            openapi => {
-                result => {},
-                errors => ['Both borrowerId and metadata properties must be supplied']
-            }
-        );
-    }
+    my $body = $c->validation->param('body');
 
     my $borrower = Koha::Patrons->find( $body->{borrowerId} );
 
@@ -74,23 +64,7 @@ sub UpdateRequest {
 
     my $credentials = _get_credentials();
 
-    my $body = $c->validation->param('payload')->{body};
-
-    if (
-        !exists $body->{requestId} ||
-        !exists $body->{updateAction} ||
-        !exists $body->{metadata}
-    ) {
-        return $c->render(
-            status => 400,
-            openapi => {
-                result => {},
-                errors => [{
-                    message => 'requestId, updateAction and metadata properties must be supplied'
-                }]
-            }
-        );
-    }
+    my $body = $c->validation->param('body');
 
     # Base request including passed metadata and credentials
     my $req = {

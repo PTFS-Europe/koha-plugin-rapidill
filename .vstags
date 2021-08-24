@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+InsertRequest	Koha/Plugin/Com/PTFSEurope/RapidILL/Api.pm	20;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	1;"	p
+Koha::Plugin::Com::PTFSEurope::RapidILL::Api	Koha/Plugin/Com/PTFSEurope/RapidILL/Api.pm	1;"	p
+Koha::Plugin::Com::PTFSEurope::RapidILL::Api::InsertRequest	Koha/Plugin/Com/PTFSEurope/RapidILL/Api.pm	20;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL::Api::UpdateRequest	Koha/Plugin/Com/PTFSEurope/RapidILL/Api.pm	60;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL::Api::_get_credentials	Koha/Plugin/Com/PTFSEurope/RapidILL/Api.pm	93;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL::Api::build_client	Koha/Plugin/Com/PTFSEurope/RapidILL/Api.pm	106;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL::api_namespace	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	79;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL::api_routes	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	70;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL::configure	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	45;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL::install	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	85;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL::new	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	27;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL::uninstall	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	100;"	s
+Koha::Plugin::Com::PTFSEurope::RapidILL::upgrade	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	89;"	s
+UpdateRequest	Koha/Plugin/Com/PTFSEurope/RapidILL/Api.pm	60;"	s
+_get_credentials	Koha/Plugin/Com/PTFSEurope/RapidILL/Api.pm	93;"	s
+api_namespace	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	79;"	s
+api_routes	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	70;"	s
+build_client	Koha/Plugin/Com/PTFSEurope/RapidILL/Api.pm	106;"	s
+configure	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	45;"	s
+install	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	85;"	s
+new	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	27;"	s
+uninstall	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	100;"	s
+upgrade	Koha/Plugin/Com/PTFSEurope/RapidILL.pm	89;"	s

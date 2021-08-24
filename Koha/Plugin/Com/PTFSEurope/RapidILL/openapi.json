@@ -6,7 +6,7 @@
             "tags": ["rapidill", "insertrequest"],
             "parameters": [
                 {
-                    "name": "payload",
+                    "name": "body",
                     "in": "body",
                     "description": "The request payload",
                     "required": true,
@@ -21,7 +21,9 @@
                                 "description": "The metadata describing the requested material",
                                 "type": "object"
                             }
-                        }
+                        },
+                        "additionalProperties": false,
+                        "required": ["borrowerId", "metadata"]
                     }
                 }
             ],
@@ -42,7 +44,7 @@
             "tags": ["rapidill", "updaterequest"],
             "parameters": [
                 {
-                    "name": "payload",
+                    "name": "body",
                     "in": "body",
                     "description": "The request payload",
                     "required": true,
@@ -61,7 +63,9 @@
                                 "description": "The metadata describing the requested material",
                                 "type": "object"
                             }
-                        }
+                        },
+                        "additionalProperties": false,
+                        "required": ["requestId", "updateAction", "metadata"]
                     }
                 }
             ],
