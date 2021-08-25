@@ -28,7 +28,7 @@ sub InsertRequest {
 
     my $borrower = Koha::Patrons->find( $body->{borrowerId} );
 
-    my $metadata = $body->{metadata} //= {};
+    my $metadata = $body->{metadata} || {};
 
     # Base request including passed metadata and credentials
     my $req = {
