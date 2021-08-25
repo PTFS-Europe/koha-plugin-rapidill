@@ -26,25 +26,16 @@ sub InsertRequest {
 
     my $body = $c->validation->param('body');
 
-    my $borrower = Koha::Patrons->find( $body->{borrowerId} );
-
     my $metadata = $body->{metadata} || {};
 
     # Base request including passed metadata and credentials
     my $req = {
         input => {
-            PatronId             => $borrower->borrowernumber,
-            PatronName           => join (" ", ($borrower->firstname, $borrower->surname)),
-            PatronNotes          => "== THIS IS A TEST - PLEASE IGNORE! ==",
             ClientAppName        => "Koha RapidILL client",
-            IsHoldingsCheckOnly  => 0,
-            DoBlockLocalOnly     => 0,
             %{$credentials},
             %{$metadata}
         }
     };
-
-    $req->{input}->{PatronEmail} = $borrower->email if $borrower->email;
 
     my $client = build_client('InsertRequest');
 
