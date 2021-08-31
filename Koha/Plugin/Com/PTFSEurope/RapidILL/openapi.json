@@ -78,5 +78,39 @@
                 }
             }
         }
+    },
+    "/retrievehistory": {
+        "post": {
+            "x-mojo-to": "Com::PTFSEurope::RapidILL::Api#RetrieveHistory",
+            "operationId": "ApiRetrieveHistoryRapidILL",
+            "tags": ["rapidill", "retrievehistory"],
+            "parameters": [
+                {
+                    "name": "body",
+                    "in": "body",
+                    "description": "The request payload",
+                    "required": true,
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "requestId": {
+                                "description": "The ID of the request being updated",
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": ["requestId"]
+                    }
+                }
+            ],
+            "produces": [
+                "application/json"
+            ],
+            "responses": {
+                "200": {
+                    "description": "The result of the RetrieveHistory call to the RapidILL API"
+                }
+            }
+        }
     }
 }
