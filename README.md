@@ -9,11 +9,13 @@ This plugin requires the following Perl modules:
 
 [XML::Compile](https://metacpan.org/pod/XML::Compile)
 
+[XML::Compile::SOAP]()
+
 [XML::Compile::WSDL11](https://metacpan.org/pod/XML::Compile::WSDL11)
 
 [XML::Compile::SOAP11](https://metacpan.org/pod/XML::Compile::SOAP11)
 
-[XML::Compile::SOAP12](https://metacpan.org/pod/XML::Compile::SOAP12)
+[XML::Compile::Transport::SOAPHTTP](https://metacpan.org/dist/XML-Compile-SOAP/view/lib/XML/Compile/Transport/SOAPHTTP.pod)
 
 Download this plugin by downloading the latest release .kpz file from the [releases page](https://github.com/PTFS-Europe/koha-plugin-rapidill/releases).
 
