@@ -5,6 +5,13 @@ This is a plugin for [Koha](https://koha-community.org/) that allows you to make
 
 ## Getting Started
 
+This plugin requires the following Perl modules:
+
+[XML::Compile](https://metacpan.org/pod/XML::Compile)
+[XML::Compile::WSDL11](https://metacpan.org/pod/XML::Compile::WSDL11)
+[XML::Compile::SOAP11](https://metacpan.org/pod/XML::Compile::SOAP11)
+[XML::Compile::SOAP12](https://metacpan.org/pod/XML::Compile::SOAP12)
+
 Download this plugin by downloading the latest release .kpz file from the [releases page](https://github.com/PTFS-Europe/koha-plugin-rapidill/releases).
 
 The plugin system needs to be turned on by a system administrator.
