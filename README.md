@@ -17,6 +17,8 @@ This plugin requires the following Perl modules:
 
 [XML::Compile::Transport::SOAPHTTP](https://metacpan.org/dist/XML-Compile-SOAP/view/lib/XML/Compile/Transport/SOAPHTTP.pod)
 
+[JSON::Validator](https://metacpan.org/pod/JSON::Validator)
+
 Download this plugin by downloading the latest release .kpz file from the [releases page](https://github.com/PTFS-Europe/koha-plugin-rapidill/releases).
 
 The plugin system needs to be turned on by a system administrator.
