@@ -11,13 +11,13 @@ use LWP::UserAgent;
 use HTTP::Request;
 use JSON qw( encode_json decode_json );
 
-our $VERSION = "1.0.0";
+our $VERSION = "1.0.1";
 
 our $metadata = {
     name            => 'RapidILL',
     author          => 'Andrew Isherwood',
     date_authored   => '2021-08-20',
-    date_updated    => "2021-08-20",
+    date_updated    => "2021-09-16",
     minimum_version => '18.05.00.000',
     maximum_version => undef,
     version         => $VERSION,
@@ -36,7 +36,6 @@ sub new {
     ## and returns our actual $self
     my $self = $class->SUPER::new($args);
 
-    $self->{cgi} = CGI->new();
     $self->{config} = decode_json($self->retrieve_data('rapid_config') || '{}');
 
     return $self;
