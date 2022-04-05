@@ -112,5 +112,39 @@
                 }
             }
         }
+    },
+    "/retrieverequestinfo": {
+        "post": {
+            "x-mojo-to": "Com::PTFSEurope::RapidILL::Api#RetrieveRequestInfo",
+            "operationId": "ApiRetrieveRequestInfoRapidILL",
+            "tags": ["rapidill", "retrieverequestinfo"],
+            "parameters": [
+                {
+                    "name": "body",
+                    "in": "body",
+                    "description": "The request payload",
+                    "required": true,
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "requestId": {
+                                "description": "The ID of the request being requested",
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": ["requestId"]
+                    }
+                }
+            ],
+            "produces": [
+                "application/json"
+            ],
+            "responses": {
+                "200": {
+                    "description": "The result of the RetrieveRequestInfo call to the RapidILL API"
+                }
+            }
+        }
     }
 }

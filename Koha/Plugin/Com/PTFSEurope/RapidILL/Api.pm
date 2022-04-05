@@ -114,6 +114,36 @@ sub RetrieveHistory {
     );
 }
 
+sub RetrieveRequestInfo {
+
+    # Validate what we've received
+    my $c = shift->openapi->valid_input or return;
+
+    my $credentials = _get_credentials();
+
+    my $body = $c->validation->param('body');
+
+    # Base request including passed metadata and credentials
+    my $req = {
+        input => {
+            RequestId       => $body->{requestId},
+            %{$credentials}
+        }
+    };
+
+    my $client = build_client('RetrieveRequestInfo');
+
+    my $response = $client->($req);
+
+    return $c->render(
+        status => 200,
+        openapi => {
+            result => $response->{parameters}->{RetrieveRequestInfoResult},
+            errors => []
+        }
+    );
+}
+
 sub _get_credentials {
 
     my $plugin = Koha::Plugin::Com::PTFSEurope::RapidILL->new();
